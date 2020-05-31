@@ -1,0 +1,5 @@
+/.katas
+/.vscode/launch.json
+/.vscode/settings.json
+/[Bb]uild
+/Katas/*.cpp

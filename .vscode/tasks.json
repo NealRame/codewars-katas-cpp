@@ -1,0 +1,27 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Create new Kata ...",
+            "type": "shell",
+            "command": "${workspaceFolder}/Scripts/Kata.sh",
+            "args": [{
+                "value": "${input:KataName}",
+                "quoting": "strong"
+            }],
+            "options": {
+                "env": {
+                    "SOURCES_DIR": "${workspaceFolder}"
+                }
+            },
+            "problemMatcher": []
+        }
+    ],
+    "inputs": [{
+        "id": "KataName",
+        "type": "promptString",
+        "description": "Name of the Kata"
+    }]
+}
